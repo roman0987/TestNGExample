@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="MyPortalAutomation" verbose="1">
+    <test name="Regression1">
+        <classes>
+            <class name="TestNG">
+                <methods>
+                    <include name="runTest2"/>
+                    <include name="runTest1"/>
+                    <exclude name="runTest3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Regression2">
+        <classes>
+            <class name="TestNG">
+                <methods>
+                    <exclude name="runTest2"/>
+                    <include name="runTest1"/>
+                    <exclude name="runTest3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
